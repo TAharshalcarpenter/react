@@ -11,10 +11,12 @@ jobs:
   echo-input:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/github-script@v6
-        env:
-          SHA: '${{env.parentSHA}}'
+      - name: checkout v2
+        uses: actions/checkout@v2
+      - name: Github Script
+        uses: actions/github-script@v6
         with:
           script: |
             console.log("Hello world!")
+      - name: Gitlog
+        run: git log HEAD...${{ github.event.inputs.branch_type }}
