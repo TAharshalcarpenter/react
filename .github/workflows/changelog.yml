@@ -20,5 +20,3 @@ jobs:
             console.log("Hello world!")
       - name: Gitlog
         run: echo "git log HEAD...${{ github.event.inputs.taggie }}"
-        with:
-          fetch-depth: 0
