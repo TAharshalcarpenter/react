@@ -1,5 +1,12 @@
 name: Changelog tester
 
+on:
+  workflow_dispatch:
+    inputs:
+      branch_to_release:
+        description: 'Publish release branch'
+        required: true
+
 jobs:
   echo-input:
     runs-on: ubuntu-latest
