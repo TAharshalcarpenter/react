@@ -20,4 +20,4 @@ jobs:
             console.log("Hello world!")
       - name: Gitlog
         run: |
-          git log HEAD...${{ github.event.inputs.taggie }}
+          echo "$(git log HEAD...${{ github.event.inputs.taggie }})"
