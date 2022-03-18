@@ -8,7 +8,8 @@ on:
         required: true
 
 jobs:
-  runs-on: ubuntu-latest
-  steps:
-    - uses: actions/checkout@v2
-      run: git log
+  printlog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        run: git log
