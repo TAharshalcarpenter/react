@@ -11,5 +11,4 @@ jobs:
   printlog:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-        run: git log
+      - run: git log
